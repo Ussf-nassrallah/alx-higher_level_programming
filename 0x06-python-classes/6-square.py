@@ -7,8 +7,8 @@ class Square:
     """ represent a square """
     def __init__(self, size=0, position=(0, 0)):
         """ create a new square """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         return self.__size * self.__size
@@ -30,6 +30,7 @@ class Square:
         n = self.__size
         if n == 0:
             print()
+            return
         for y in range(0, self.__position[1]):
             print("")
         for index in range(0, n):
