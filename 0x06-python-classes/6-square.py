@@ -30,6 +30,8 @@ class Square:
         n = self.__size
         if n == 0:
             print()
+        for y in range(0, self.__position[1]):
+            print("")
         for index in range(0, n):
             for x in range(0, self.__position[0]):
                 print(" ", end="")
