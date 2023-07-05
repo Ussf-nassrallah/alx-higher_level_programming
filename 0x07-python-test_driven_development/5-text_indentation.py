@@ -1,5 +1,10 @@
+#!/usr/bin/python3
+
+""" define text_indentation function """
+
 
 def text_indentation(text):
+    """ represent my function """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
