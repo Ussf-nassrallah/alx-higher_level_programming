@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+""" define TestMaxInteger Class """
+
+
 import unittest
 max_integer = __import__('6-max_integer').max_integer
-
-""" define TestMaxInteger Class """
 
 
 class TestMaxInteger(unittest.TestCase):
