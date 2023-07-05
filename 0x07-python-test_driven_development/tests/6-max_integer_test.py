@@ -17,11 +17,18 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEquals(max_integer([-1.5, -2.5, -3.5, 0]), 0)
         self.assertEquals(max_integer([-4.5, -3.5, -2.5, -1.5]), -1.5)
 
+        self.assertEquals(max_integer([1.5, 2, 3.5, 4]), 4)
+        self.assertEquals(max_integer([4, 3, 2, 1]), 4)
+        self.assertEquals(max_integer([-1, -2, 3, -4]), 3)
+
         self.assertEquals(max_integer(["a", "b", "c", "d"]), "d")
         self.assertEquals(max_integer(["z", "e", "f", "h"]), "z")
         self.assertEquals(max_integer("abcd"), "d")
 
         self.assertEquals(max_integer([5]), 5)
+        self.assertEquals(max_integer([-2]), -2)
+        self.assertEquals(max_integer([0]), 0)
+
         self.assertEquals(max_integer(""), None)
         self.assertEquals(max_integer([]), None)
 
