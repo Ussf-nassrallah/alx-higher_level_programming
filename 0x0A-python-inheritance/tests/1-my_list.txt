@@ -1,0 +1,10 @@
+#test file
+
+>>> MyList = __import__('1-my_list').MyList
+
+::
+	>>> my_list = MyList([5, 4, 3, 2, 1, 0])
+	>>> print(my_list)
+	[5, 4, 3, 2, 1, 0]
+
+::
