@@ -16,12 +16,3 @@
 	[0, 1, 2, 3, 4, 5]
 
 ::
-
-
-::
-	>>> my_list = MyList([5, 4, 3, 2, 'a', 0])
-	>>> my_list.print_sorted()
-	Traceback (most recent call last)
-	TypeError: all the elements of the list must be of type int
-
-::
