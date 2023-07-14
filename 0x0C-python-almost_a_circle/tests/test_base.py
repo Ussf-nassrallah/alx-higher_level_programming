@@ -24,6 +24,13 @@ class TestBase(unittest.TestCase):
         self.assertEqual(obj2.id, 13)
         self.assertEqual(obj3.id, 14)
 
+    # Test Base class using None argument
+    def test_with_none(self):
+        obj1 = Base(None)
+        obj2 = Base(None)
+        obj3 = Base(None)
+        self.assertEqual(obj1.id, obj3.id - 2)
+
     # Test Base class
     def test_global(self):
         obj1 = Base()
