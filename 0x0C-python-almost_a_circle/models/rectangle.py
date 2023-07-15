@@ -73,7 +73,7 @@ class Rectangle(Base):
             print("")
             return
         for y in range(self.y):
-            print("", end="")
+            print("")
         for col in range(self.height):
             for x in range(self.x):
                 print(" ", end="")
