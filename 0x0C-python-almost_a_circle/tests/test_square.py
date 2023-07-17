@@ -188,6 +188,7 @@ class TestSquareAllArgs(unittest.TestCase):
     def test_y_getter(self):
         self.assertEqual(0, Square(10).y)
 
+
 class TestSquareArea(unittest.TestCase):
     """ test sqaure: area """
 
@@ -211,7 +212,7 @@ class TestSquareArea(unittest.TestCase):
 
         sq_3 = Square(100, 1, 1, 1)
         sq_3.size = 12
- 
+
         sq_4 = Square(1, 1, 1, 1)
         sq_4.size = 13
 
@@ -254,6 +255,7 @@ class TestSquareStr(unittest.TestCase):
         s.x = 8
         s.y = 10
         self.assertEqual("[Square] ([4]) 8/10 - 15", str(s))
+
 
 class TestSquareDisplay(unittest.TestCase):
     """ test sqaure: display method """

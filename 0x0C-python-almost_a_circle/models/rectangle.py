@@ -86,7 +86,7 @@ class Rectangle(Base):
             index = 0
             for argument in args:
                 if index == 0:
-                    if argument == None:
+                    if argument is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = argument
@@ -102,7 +102,7 @@ class Rectangle(Base):
         elif kwargs and len(kwargs) != 0:
             for key, value in kwargs.items():
                 if key == "id":
-                    if value == None:
+                    if value is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = value
@@ -124,7 +124,6 @@ class Rectangle(Base):
             "y": self.y
         }
         return dic
-
 
     def __str__(self):
         _id = self.id

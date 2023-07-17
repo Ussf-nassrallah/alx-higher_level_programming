@@ -5,6 +5,7 @@ from models.rectangle import Rectangle
 
 """ Define a TestRectangle  Class """
 
+
 class TestRectangleValues(unittest.TestCase):
     """ Test Rectangle arguments """
     def test_no_arguments(self):
