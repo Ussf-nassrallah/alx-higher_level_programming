@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-
 """ Define a square Class """
-
 from models.rectangle import Rectangle
 
 
@@ -9,10 +7,12 @@ class Square(Rectangle):
     """ Represent a Square class """
 
     def __init__(self, size, x=0, y=0, id=None):
+        """ init a new square """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
+        """ return the size of the square """
         return self.width
 
     @size.setter
@@ -21,6 +21,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """ Update method thats update the square """
         if args and len(args) != 0:
             index = 0
             for argument in args:
@@ -51,6 +52,7 @@ class Square(Rectangle):
                     self.y = value
 
     def __str__(self):
+        """ return the str() && print() representation of the rectangle """
         _id = self.id
         _x = self.x
         _y = self.y
@@ -59,6 +61,7 @@ class Square(Rectangle):
         return s.format(_id, _x, _y, _w)
 
     def to_dictionary(self):
+        """ return the dictionary representation of a rectangle."""
         dic = {
             "id": self.id,
             "size": self.width,
