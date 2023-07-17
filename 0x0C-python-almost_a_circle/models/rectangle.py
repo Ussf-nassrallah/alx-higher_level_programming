@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-
 """ Define a Rectangle class """
-
-
 from models.base import Base
 
 
@@ -11,7 +8,6 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """ init a new rectangle """
-
         super().__init__(id)
         self.width = width
         self.height = height
@@ -20,6 +16,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ return the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -32,6 +29,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """ return the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -44,6 +42,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """ return the x value of the Rectangle."""
         return self.__x
 
     @x.setter
@@ -56,6 +55,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """ return the y value of the Rectangle."""
         return self.__y
 
     @y.setter
@@ -67,10 +67,12 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """ return the area of the Rectangle."""
         result = self.width * self.height
         return result
 
     def display(self):
+        """ display method """
         if self.width == 0 or self.height == 0:
             print("")
             return
@@ -84,6 +86,7 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args, **kwargs):
+        """ update method """
         if args and len(args) != 0:
             index = 0
             for argument in args:
@@ -118,6 +121,7 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
+        """ return the dict of the Rectangle."""
         dic = {
             "id": self.id,
             "width": self.width,
@@ -128,6 +132,7 @@ class Rectangle(Base):
         return dic
 
     def __str__(self):
+       """ __str__ method """
         _id = self.id
         _w = self.width
         _h = self.height
