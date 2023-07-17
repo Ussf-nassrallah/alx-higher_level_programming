@@ -50,9 +50,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """
-          returns an instance with all attributes already set:
-        """
+        """ returns an instance with all attributes already set """
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
                 r = cls(1, 1)
@@ -60,3 +58,14 @@ class Base:
                 r = cls(1)
             r.update(**dictionary)
             return r
+
+    @classmethod
+    def load_from_file(cls):
+        """ returns a list of instances: """
+        f_name = "{}.json".format(cls.__name__)
+        try:
+            with open(f_name, "r") as file:
+                list_dicts = Base.from_json_string(file.read())
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
+            return []
