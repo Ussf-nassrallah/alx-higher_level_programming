@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
+""" Define a TestRectangle  Class """
+
 import sys
 import io
 import unittest
 from models.rectangle import Rectangle
-
-""" Define a TestRectangle  Class """
 
 
 class TestRectangleValues(unittest.TestCase):
