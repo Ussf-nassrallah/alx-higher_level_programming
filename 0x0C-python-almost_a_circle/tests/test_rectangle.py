@@ -229,7 +229,6 @@ class TestRectangleDict(unittest.TestCase):
 class TestRectangleDisplay(unittest.TestCase):
     """ Test Rectangle : Display Method """
 
-
     @staticmethod
     def take_stdout(square, method):
         """
@@ -443,4 +442,3 @@ class TestRectangleUpdate(unittest.TestCase):
         r = Rectangle(10, 10, 10, 10, 10)
         r.update(height=5, id=89, a=1, b=54, x=19, y=7)
         self.assertEqual("[Rectangle] (89) 19/7 - 10/5", str(r))
-
