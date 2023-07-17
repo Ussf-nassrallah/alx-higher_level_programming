@@ -3,6 +3,7 @@
 """ define a Base class """
 
 import json
+import turtle
 
 
 class Base:
@@ -69,3 +70,39 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ Draw Rectangles and Squares using the turtle module """
+        obj = turtle.Turtle()
+        obj.screen.bgcolor("#b7312c")
+        obj.pensize(3)
+        obj.shape("turtle")
+        obj.color("#ffffff")
+
+        for rect in list_rectangles:
+            obj.showturtle()
+            obj.up()
+            obj.goto(rect.x, rect.y)
+            obj.down()
+            for i in range(2):
+                obj.forward(rect.width)
+                obj.left(90)
+                obj.forward(rect.height)
+                obj.left(90)
+            obj.hideturtle()
+
+        obj.color("#b5e3d8")
+        for sq in list_squares:
+            obj.showturtle()
+            obj.up()
+            obj.goto(sq.x, sq.y)
+            obj.down()
+            for i in range(2):
+                obj.forward(sq.width)
+                obj.left(90)
+                obj.forward(sq.height)
+                obj.left(90)
+            obj.hideturtle()
+
+        turtle.exitonclick()
