@@ -3,8 +3,10 @@
 const { argv } = require('process');
 const isvalid = () => {
   if(argv[2]  === undefined) return false;
+  let i = 0;
   for(const x of argv[2]){
-    if(x === '-') continue;
+    if(x=== '-' && i === 0) {i++; continue;}
+    
     if(isNaN(x)) return false;
   }
   return true;
