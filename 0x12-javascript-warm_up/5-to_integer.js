@@ -3,10 +3,8 @@
 
 const { argv } = require('process');
 
-let num = parseInt(argv[2]);
-
-if (num) {
-  console.log('My number: ' + num);
-} else {
+if (isNaN(argv[2]) || argv[2] === undefined) {
   console.log('Not a number');
+} else {
+  console.log('My number: ' + parseInt(argv[2]));
 }
