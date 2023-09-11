@@ -7,7 +7,7 @@ if (isNaN(argv[2]) || argv[2] === undefined) {
   const size = parseInt(argv[2]);
   let output = '';
   for (let x = 0; x < size; x++) {
-    output += 'x';
+    output = output.concat('x');
   }
   for (let y = 0; y < size; y++) {
     console.log(output);
