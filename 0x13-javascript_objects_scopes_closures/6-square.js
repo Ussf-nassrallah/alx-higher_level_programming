@@ -11,7 +11,7 @@ class Square extends Rectangle {
   charPrint (c) {
     let char;
 
-    if (!c) {
+    if (typeof c === 'undefined') {
       char = 'X';
     } else {
       char = c;
