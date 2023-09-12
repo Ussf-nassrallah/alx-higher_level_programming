@@ -3,6 +3,6 @@
 const arr = [];
 exports.logMe = function (item) {
   arr.push(item);
-  const item_idx = arr.indexOf(item);
-  console.log(`${item_idx}: ${item}`);
+  const itemIdx = arr.indexOf(item);
+  console.log(`${itemIdx}: ${item}`);
 };
