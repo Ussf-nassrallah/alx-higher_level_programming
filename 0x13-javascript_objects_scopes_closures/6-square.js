@@ -1,13 +1,8 @@
 #!/usr/bin/node
 // class Square that defines a square and inherits from Rectangle
-const Rectangle = require('./4-rectangle');
+const SquareParent = require('./5-square.js');
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-    this.size = size;
-  }
-
+class Square extends SquareParent {
   charPrint (c) {
     let char;
 
@@ -17,8 +12,8 @@ class Square extends Rectangle {
       char = c;
     }
 
-    for (let i = 0; i < this.size; i++) {
-      console.log(char.repeat(this.size));
+    for (let i = 0; i < this.height; i++) {
+      console.log(char.repeat(this.width));
     }
   }
 }
