@@ -22,11 +22,12 @@ if __name__ == "__main__":
         db=dbName
     )
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
+    cur.execute("SELECT * FROM states ORDER BY states.id")
 
     states = cur.fetchall()
     for state in states:
-        print(state)
+        if state[1][0] == 'N':
+            print(state)
 
     cur.close()
     db.close()
