@@ -24,8 +24,9 @@ if __name__ == "__main__":
     )
     cur = db.cursor()
 
-    q = "SELECT * FROM states WHERE name = %s ORDER BY states.id"
-    cur.execute(q, (user_input,))
+    qs = "SELECT * FROM states WHERE name LIKE '{:s}' ORDER BY states.id"
+    q = qs.format(user_input)
+    cur.execute(q)
 
     states = cur.fetchall()
     for state in states:
