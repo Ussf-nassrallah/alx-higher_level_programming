@@ -24,15 +24,17 @@ if __name__ == "__main__":
     )
 
     cur = db.cursor()
-    cur.execute("SELECT cities.name FROM cities \
+    cur.execute("SELECT * FROM cities \
                 INNER JOIN states ON cities.state_id = states.id \
-                WHERE states.name LIKE %s \
-                ORDER BY cities.id ASC", (userInput,))
+                ORDER BY cities.id ASC")
 
     cities = cur.fetchall()
-    cities_arr = [city[0] for city in cities]
-    if cities_arr:
-        print(", ".join(cities_arr))
+    cities_arr = []
+    for city in cities:
+        if city[4] == userInput:
+            cities_arr.append(city[2])
+
+    print(", ".join(cities_arr))
 
     cur.close()
     db.close()
