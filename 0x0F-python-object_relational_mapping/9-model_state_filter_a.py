@@ -26,5 +26,5 @@ if __name__ == "__main__":
     states = session.query(State).order_by(State.id)
 
     for state in states:
-        if 'z' in state.name:
+        if 'a' in state.name:
             print(f"{state.id}: {state.name}")
