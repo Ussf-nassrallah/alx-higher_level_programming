@@ -12,9 +12,9 @@ def fetch_url():
         data = response.read()
         # display the response
         print("Body response:")
-        print(f"    - type: {type(data)}")
-        print(f"    - content: {data}")
-        print(f"    - utf8 content: {data.decode()}")
+        print(f"\t- type: {type(data)}")
+        print(f"\t- content: {data}")
+        print(f"\t- utf8 content: {data.decode()}")
 
 
 if __name__ == "__main__":
