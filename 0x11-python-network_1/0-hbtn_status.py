@@ -16,5 +16,6 @@ def fetch_url():
         print(f"    - content: {data}")
         print(f"    - utf8 content: {data.decode()}")
 
+
 if __name__ == "__main__":
     fetch_url()
