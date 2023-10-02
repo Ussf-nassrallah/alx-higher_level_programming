@@ -16,7 +16,7 @@ if __name__ == "__main__":
     else:
         letter = sys.argv[1]
 
-    values = {'p': letter}
+    values = {'q': letter}
     res = requests.post(base_url, data=values)
     try:
         data = res.json()
