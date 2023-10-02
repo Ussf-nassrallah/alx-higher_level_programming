@@ -11,8 +11,7 @@ import requests
 def fetch_url():
     base_url = sys.argv[1]
     res = requests.get(base_url)
-    headers = res.headers
-    print(headers['X-Request-Id'])
+    print(res.headers.get('X-Request-Id'))
 
 
 if __name__ == "__main__":
